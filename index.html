@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadline Buddy - Your Task Management Companion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>📅 Deadline Buddy</h1>
+                <p class="subtitle">Stay organized, meet your deadlines</p>
+            </div>
+        </header>
+
+        <main>
+            <div class="add-task-section">
+                <h2>Add New Task</h2>
+                <form id="taskForm" class="task-form">
+                    <div class="form-group">
+                        <input type="text" id="taskName" placeholder="Enter task name..." required>
+                    </div>
+                    <div class="form-group">
+                        <input type="datetime-local" id="taskDeadline" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="taskPriority">
+                            <option value="low">Low Priority</option>
+                            <option value="medium" selected>Medium Priority</option>
+                            <option value="high">High Priority</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">Add Task</button>
+                </form>
+            </div>
+
+            <div class="filter-section">
+                <button class="filter-btn active" data-filter="all">All Tasks</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+                <button class="filter-btn" data-filter="overdue">Overdue</button>
+            </div>
+
+            <div class="tasks-section">
+                <h2>Your Tasks</h2>
+                <div id="tasksContainer" class="tasks-container">
+                    <div class="empty-state" id="emptyState">
+                        <p>🎯 No tasks yet. Add your first task above!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
