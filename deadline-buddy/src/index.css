@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  background: #FAFAFC;
+  color: #111827;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Sora', sans-serif;
+}
+
+::selection {
+  background: #C4B5FD;
+  color: #111827;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FAFAFC;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4B5FD;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A78BFA;
+}
+
+.mesh-bg {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(124, 58, 237, 0.10), transparent 40%),
+    radial-gradient(circle at 85% 10%, rgba(167, 139, 250, 0.14), transparent 45%),
+    radial-gradient(circle at 50% 90%, rgba(196, 181, 253, 0.16), transparent 50%),
+    #FAFAFC;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #7C3AED, #A78BFA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
